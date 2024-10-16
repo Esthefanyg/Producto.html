@@ -1,65 +1,74 @@
-class product {
-  constructor (name, price, year){
-      this.name=name;
-       this. price=price;
-        this.year=year;
+<DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>repuestos de carro </title>
+    <!-- Bootswatch Cosmo Theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"
+    />
 
-  }
-}
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="App.css" />
+  </head>
 
-class UI {
- addProduct(product){
-  const producList = document.getElementById("product.List");
-  const elment = document.createElement("div");
-  Element.innerHTML = 
-  <div class= "card text.center mb.4">
-<div class="card.body">
-  <Strong>product Name</Strong>: ${product.name}
-  <Strong>product Price</Strong>:delete ${product.price}
-  <Strong>product Year</Strong>: ${product.year}
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">repuestos de carro</a>
+    </nav>
 
-  </div>
+    <div class="container">
+      <!-- APPLICATION -->
+      <div id="App" class="row pt-5">
+        <!-- FORM -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h4>Agregar Producto</h4>
+            </div>
+            <form id="product-form" class="card-body">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Nombre del Repuesto"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="price"
+                  step="0.01"
+                  placeholder="Precio de Repuestos"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  id="year"
+                  min="1900"
+                  max="2099"
+                  step="1"
+                  value="2025"
+                  class="form-control"
+                />
+              </div>
+              <input
+                type="submit"
+                value="Save"
+                class="btn btn-primary btn-block"
+              />
+            </form>
+          </div>
+        </div>
 
-  </div>
-productList.appemdChild(Element);
-this.resetForm();
-  }
-
-  resetForm(){
-    document.getElementById("product.form").reset();
-  }
-
-
-  deleteProduct() {
-if(Element,name==="delete");
-console.log(Element,parentElement.parentElement.remove())
-  }
-  showMessage() {
-  const div= document.createElement("div");
-  div.className = "alert, alert".$ +{cssclass} 
-  div.appendChild(document.createTextNode(message));
-  //Show in DOM
-  const container = document.querySelector("container");
-  const app = document.querySelector("App");
-  container.insertBefore(div, app);
-  }
-}
-
-//DOM Events
-document.getElementById("product.form") 
-   .addEventListener("submit, funtion") (e) 
-  const name =  document.getElementById("name").value;
-  const price=  document.getElementById("price").value;
-  const year =  document.getElementById("year").value;
-
-  const product = new (productname,price,year);
-
-  const UI = new UI();
-  UI.addProduct(product);
-  UI. resetForm();
-  UI.showMessage("Product added succesfully");
-
-  e.preventDefault();
-   
-   
-   
+        <!-- Lista de Productos -->
+        <div id="repuestosdecarro" class="col-md-8"></div>
+      </div>
+    </div>
